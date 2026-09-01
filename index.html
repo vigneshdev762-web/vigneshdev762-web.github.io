@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vignesh D — Aspiring Full Stack Developer. MERN Stack developer with hands-on training and project experience.">
+<meta name="theme-color" content="#050807">
+<title>Vignesh D — Aspiring Full Stack Developer</title>
+<style>
+:root{
+  --bg:#050807; --panel:rgba(9,22,18,.72); --panel2:rgba(12,30,25,.55);
+  --text:#eafff8; --muted:#91aaa1; --accent:#00e5a0; --accent2:#19f5c1;
+  --line:rgba(25,245,193,.16); --shadow:0 24px 80px rgba(0,229,160,.08);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 70% 8%,rgba(0,229,160,.10),transparent 28%),radial-gradient(circle at 10% 40%,rgba(0,191,166,.06),transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(25,245,193,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(25,245,193,.06) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 92%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1180px,92%);z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border:1px solid transparent;border-radius:18px;transition:.35s}
+nav.scrolled{background:rgba(5,8,7,.78);backdrop-filter:blur(18px);border-color:var(--line);box-shadow:var(--shadow)}
+.logo{font-weight:850;letter-spacing:-.04em;font-size:19px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:24px;font-size:13px;color:#b9ccc5}.navlinks a{transition:.2s}.navlinks a:hover,.navlinks a.active{color:var(--accent)}
+.nav-actions{display:flex;gap:10px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);padding:11px 17px;border-radius:12px;font-weight:700;font-size:13px;transition:transform .18s,box-shadow .25s,border-color .25s;background:rgba(10,26,21,.65)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#00bfa6);color:#03100b;border:0;box-shadow:0 12px 35px rgba(0,229,160,.18)} .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,229,160,.13);border-color:rgba(25,245,193,.45)}
+.menu{display:none;background:none;border:0;color:var(--text);font-size:22px}
+section{padding:105px 0}.hero{min-height:100vh;display:grid;align-items:center;padding-top:130px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:45px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:99px;background:rgba(0,229,160,.04);color:#cceee3;font-size:12px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.35;transform:scale(.75)}}
+h1{font-size:clamp(56px,8vw,102px);line-height:.86;letter-spacing:-.075em;margin:22px 0 20px;max-width:800px}
+.gradient{background:linear-gradient(100deg,#fff 25%,var(--accent2) 65%,#00bfa6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(23px,3vw,38px);font-weight:800;margin-bottom:18px;color:#d8fff3}.cursor{color:var(--accent);animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
+.lead{color:#9db4ac;line-height:1.75;max-width:650px;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.socials{display:flex;gap:9px}.social{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;color:#b8cec5;background:rgba(8,18,15,.55);font-size:12px;font-weight:800}
+.visual{min-height:500px;position:relative;display:grid;place-items:center}.portrait{width:300px;height:300px;border-radius:50%;display:grid;place-items:center;font-size:100px;font-weight:900;letter-spacing:-.09em;background:radial-gradient(circle at 35% 30%,#173e32,#091712 55%,#050807);border:1px solid rgba(25,245,193,.55);box-shadow:0 0 0 12px rgba(0,229,160,.025),0 0 90px rgba(0,229,160,.20);position:relative;z-index:2}
+.ring{position:absolute;width:390px;height:390px;border:1px solid rgba(25,245,193,.24);border-radius:50%;animation:spin 18s linear infinite}.ring:before,.ring:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px var(--accent)}.ring:before{top:35px;left:75px}.ring:after{right:30px;bottom:80px}@keyframes spin{to{transform:rotate(360deg)}}
+.orb{position:absolute;border:1px solid rgba(25,245,193,.25);background:rgba(4,18,14,.8);backdrop-filter:blur(12px);padding:10px 13px;border-radius:12px;font-size:12px;color:#b8fff0;box-shadow:0 10px 40px rgba(0,229,160,.08);animation:float 6s ease-in-out infinite}.o1{top:50px;left:4%}.o2{top:110px;right:5%;animation-delay:-2s}.o3{bottom:100px;left:9%;animation-delay:-3.5s}.o4{bottom:60px;right:12%;animation-delay:-1s}.o5{top:45%;right:-2%;animation-delay:-4s}@keyframes float{50%{transform:translateY(-16px) rotate(1deg)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(8,18,15,.55)}.stat b{font-size:24px;color:var(--accent2);display:block}.stat span{font-size:11px;color:#7f9a91}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:32px}.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.section-head h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.055em;margin:7px 0 0}.section-head p{color:var(--muted);max-width:480px;line-height:1.6}
+.bento{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(10,28,22,.78),rgba(6,14,12,.65));border-radius:20px;padding:25px;box-shadow:var(--shadow);position:relative;overflow:hidden}.card:after{content:"";position:absolute;inset:auto -30% -70% 20%;height:180px;background:radial-gradient(circle,rgba(0,229,160,.09),transparent 65%);pointer-events:none}.card h3{margin:0 0 12px;font-size:20px}.card p,.card li{color:#98afa7;line-height:1.7;font-size:14px}.info{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}.info div{padding:14px;border:1px solid rgba(25,245,193,.10);border-radius:13px;background:rgba(0,0,0,.14)}.info small{display:block;color:#708a81;font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}.info span{font-size:13px}
+.skill-wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.skill{padding:18px 12px;border:1px solid var(--line);border-radius:16px;background:rgba(7,18,15,.65);text-align:center;transition:.25s;transform-style:preserve-3d}.skill:hover{transform:translateY(-6px) rotateX(3deg) rotateY(-3deg);border-color:rgba(25,245,193,.45);box-shadow:0 18px 45px rgba(0,229,160,.09)}.skill .icon{font-size:25px;margin-bottom:8px}.skill b{font-size:12px}.skill small{display:block;color:#6f8b82;margin-top:5px;font-size:10px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{min-height:350px}.project-preview{height:160px;border-radius:14px;border:1px solid rgba(25,245,193,.14);background:linear-gradient(135deg,#0c241c,#07100d);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin-bottom:20px}.project-preview:before{content:"";width:70%;height:70%;border-radius:12px;border:1px solid rgba(25,245,193,.25);box-shadow:inset 0 0 45px rgba(0,229,160,.05);background:linear-gradient(180deg,rgba(25,245,193,.05),transparent)}.preview-label{position:absolute;font-weight:850;letter-spacing:-.03em;color:#d8fff3;font-size:18px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tag{font-size:10px;color:#a8d8ca;border:1px solid rgba(25,245,193,.15);border-radius:99px;padding:6px 9px;background:rgba(0,229,160,.04)}.project ul{padding-left:18px}.project-links{display:flex;gap:9px;margin-top:18px}
+.timeline{position:relative;margin-left:10px;padding-left:30px}.timeline:before{content:"";position:absolute;left:4px;top:5px;bottom:5px;width:1px;background:linear-gradient(var(--accent),rgba(0,229,160,.05))}.event{position:relative;margin-bottom:28px}.event:before{content:"";position:absolute;left:-30px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 15px rgba(0,229,160,.7)}.event time{font-size:11px;color:var(--accent);font-weight:800}.event h3{margin:7px 0 4px}.event p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+.contact{display:grid;grid-template-columns:1fr .9fr;gap:18px}.contact-big{font-size:clamp(36px,5vw,66px);letter-spacing:-.065em;line-height:.98;margin:12px 0 20px}.contact-list{display:grid;gap:10px;margin-top:22px}.contact-item{display:flex;gap:13px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(7,17,14,.55)}.contact-item b{font-size:12px}.contact-item span{display:block;color:#8ea79e;font-size:12px;margin-top:3px}
+footer{padding:30px 0 40px;color:#637b72;font-size:11px;display:flex;justify-content:space-between;border-top:1px solid rgba(25,245,193,.08)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+#cursor{position:fixed;width:16px;height:16px;border:1px solid rgba(25,245,193,.8);border-radius:50%;pointer-events:none;z-index:100;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;mix-blend-mode:screen}.cursor-dot{position:fixed;width:4px;height:4px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:101;transform:translate(-50%,-50%)}
+@media(max-width:900px){.hero-grid,.contact,.bento{grid-template-columns:1fr}.visual{min-height:420px}.skill-wrap{grid-template-columns:repeat(3,1fr)}.navlinks{display:none}.menu{display:block}.nav-open .navlinks{display:flex;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:rgba(5,8,7,.96);padding:20px;border:1px solid var(--line);border-radius:16px}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){section{padding:75px 0}.hero{padding-top:110px}.portrait{width:230px;height:230px;font-size:74px}.ring{width:300px;height:300px}.visual{min-height:350px}.orb{font-size:9px;padding:7px 9px}.o1{top:20px}.o2{top:70px}.o3{bottom:60px}.o4{bottom:20px}.o5{display:none}.skill-wrap,.projects{grid-template-columns:repeat(2,1fr)}.skill{padding:14px 8px}.info{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.actions .btn{width:100%}.socials{justify-content:center}nav{top:8px}.nav-actions .btn{display:none}#cursor,.cursor-dot{display:none}footer{display:block;text-align:center}footer span{display:block;margin-top:8px}}
+</style>
+</head>
+<body>
+<div id="cursor"></div><div class="cursor-dot" id="cursorDot"></div>
+
+<nav id="nav">
+  <a class="logo" href="#home">VIGNESH<span>.</span></a>
+  <div class="navlinks" id="links">
+    <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions"><a class="btn" href="Vignesh_Resume.pdf" target="_blank">↧ Resume</a><button class="menu" id="menu">☰</button></div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow"><span class="dot"></span> Available for Opportunities</div>
+      <h1>VIGNESH <span class="gradient">D</span></h1>
+      <div class="role"><span id="typed">Aspiring Full Stack Developer</span><span class="cursor">|</span></div>
+      <p class="lead">MERN Stack Developer with hands-on training and project experience building responsive web applications using MongoDB, Express.js, React.js and Node.js.</p>
+      <div class="actions">
+        <a class="btn primary magnetic" href="#projects">View My Work →</a>
+        <a class="btn magnetic" href="Vignesh_Resume.pdf" download>Download Resume ↓</a>
+        <a class="btn magnetic" href="#contact">Contact Me →</a>
+      </div>
+      <div class="socials">
+        <a class="social" href="mailto:vigneshdev762@gmail.com" title="Email">✉</a>
+        <a class="social" href="tel:+918608422985" title="Phone">☎</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>02</b><span>Featured Projects</span></div>
+        <div class="stat"><b>MERN</b><span>Development</span></div>
+        <div class="stat"><b>02</b><span>Degrees</span></div>
+        <div class="stat"><b>2026</b><span>Latest Training</span></div>
+      </div>
+    </div>
+    <div class="visual reveal" id="visual">
+      <div class="ring"></div>
+      <div class="portrait">VD</div>
+      <div class="orb o1">React.js</div><div class="orb o2">Node.js</div><div class="orb o3">MongoDB</div><div class="orb o4">JavaScript</div><div class="orb o5">Express.js</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">01 — About</div><h2>Developer with a<br><span class="gradient">builder mindset.</span></h2></div><p>I enjoy turning ideas into responsive full-stack applications and solving real problems with clean, reusable code.</p></div>
+  <div class="bento">
+    <article class="card"><h3>About Me</h3><p>I am an aspiring Full Stack Developer with hands-on MERN training and practical project experience. My work includes reusable React components, REST API integration, CRUD operations, authentication, responsive UI development and database integration.</p><div class="info"><div><small>Location</small><span>Chennai, Tamil Nadu</span></div><div><small>Focus</small><span>Full Stack / MERN</span></div><div><small>Email</small><span>vigneshdev762@gmail.com</span></div><div><small>Phone</small><span>+91 8608422985</span></div></div></article>
+    <article class="card"><h3>What I Build</h3><ul><li>Responsive web applications</li><li>REST API integrations</li><li>CRUD-based applications</li><li>Authentication & authorization</li><li>Reusable React interfaces</li><li>MongoDB-backed full-stack apps</li></ul></article>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">02 — Skills</div><h2>My <span class="gradient">toolbox.</span></h2></div><p>Technologies and tools listed in my resume, organized for quick recruiter scanning.</p></div>
+  <div class="skill-wrap">
+    <div class="skill"><div class="icon">JS</div><b>JavaScript</b><small>Programming</small></div><div class="skill"><div class="icon">◇</div><b>HTML5</b><small>Programming</small></div><div class="skill"><div class="icon">#</div><b>CSS3</b><small>Programming</small></div><div class="skill"><div class="icon">⚛</div><b>React.js</b><small>Frontend</small></div><div class="skill"><div class="icon">TW</div><b>Tailwind CSS</b><small>Frontend</small></div>
+    <div class="skill"><div class="icon">B</div><b>Bootstrap</b><small>Frontend</small></div><div class="skill"><div class="icon">N</div><b>Node.js</b><small>Backend</small></div><div class="skill"><div class="icon">EX</div><b>Express.js</b><small>Backend</small></div><div class="skill"><div class="icon">API</div><b>REST APIs</b><small>Backend</small></div><div class="skill"><div class="icon">DB</div><b>MongoDB</b><small>Database</small></div>
+    <div class="skill"><div class="icon">G</div><b>Git</b><small>Tools</small></div><div class="skill"><div class="icon">GH</div><b>GitHub</b><small>Tools</small></div><div class="skill"><div class="icon">VS</div><b>VS Code</b><small>Tools</small></div><div class="skill"><div class="icon">PM</div><b>Postman</b><small>Tools</small></div><div class="skill"><div class="icon">DK</div><b>Docker</b><small>Tools</small></div>
+    <div class="skill"><div class="icon">CI</div><b>CI/CD</b><small>Tools</small></div><div class="skill"><div class="icon">{ }</div><b>JSON</b><small>Programming</small></div><div class="skill"><div class="icon">↔</div><b>CRUD</b><small>Backend</small></div><div class="skill"><div class="icon">◉</div><b>JWT</b><small>Project</small></div><div class="skill"><div class="icon">♡</div><b>Problem Solving</b><small>Soft Skill</small></div>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">03 — Projects</div><h2>Things I've <span class="gradient">built.</span></h2></div><p>Two practical projects from my resume, presented as product-style case studies.</p></div>
+  <div class="projects">
+    <article class="card project">
+      <div class="project-preview"><div class="preview-label">PHONEBOOK / CRUD APP</div></div>
+      <h3>Phonebook with Fetch API & Asynchronous JavaScript</h3>
+      <p>CRUD-based web application for creating, reading, updating and deleting contact records, with asynchronous API communication and dynamic data rendering.</p>
+      <div class="tags"><span class="tag">JavaScript</span><span class="tag">Fetch API</span><span class="tag">CRUD</span><span class="tag">Responsive UI</span></div>
+      <ul><li>Implemented asynchronous Fetch API communication.</li><li>Added form validation and dynamic contact rendering.</li><li>Structured the application with reusable JavaScript functions.</li></ul>
+      <div class="project-links"><a class="btn" href="#contact">Ask About Project →</a></div>
+    </article>
+    <article class="card project">
+      <div class="project-preview"><div class="preview-label">SKILL SWAP / MERN</div></div>
+      <h3>Skill Swap — Community Learning Exchange Platform</h3>
+      <p>Full-stack MERN application for sharing and learning skills within a community, with authentication, profiles, favorites, CRUD management and real-time chat.</p>
+      <div class="tags"><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag">JWT</span><span class="tag">Tailwind CSS</span></div>
+      <ul><li>Implemented JWT authentication and authorization.</li><li>Integrated REST APIs with MongoDB using Mongoose.</li><li>Added favorites, user profiles and real-time chat.</li><li>Deployed frontend/backend and managed source with Git/GitHub.</li></ul>
+      <div class="project-links"><a class="btn" href="#contact">Ask About Project →</a></div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="journey">
+<div class="wrap reveal">
+  <div class="section-head"><div><div class="kicker">04 — Journey</div><h2>Learning → <span class="gradient">building.</span></h2></div><p>A concise timeline generated only from the education and training information in the resume.</p></div>
+  <div class="card timeline">
+    <div class="event"><time>JUL 2020 — APR 2023</time><h3>Bachelor of Computer Applications (BCA)</h3><p>Guru Nanak College</p></div>
+    <div class="event"><time>AUG 2023 — APR 2025</time><h3>Master of Computer Applications (MCA)</h3><p>Hindustan Institute of Technology and Science</p></div>
+    <div class="event"><time>NOV 2025 — AUG 2026</time><h3>Program in AI Enhanced Full Stack Development (MERN)</h3><p>Entri Software Pvt Ltd · Illinois Tech USA · NSDC. Hands-on training in React.js, Node.js, Express.js, MongoDB, REST APIs, JavaScript and Git/GitHub.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap reveal">
+  <div class="contact">
+    <article class="card">
+      <div class="kicker">05 — Contact</div>
+      <div class="contact-big">Let's build something <span class="gradient">useful.</span></div>
+      <p class="lead">I'm open to opportunities where I can apply my full-stack development skills, continue learning and contribute to real-world applications.</p>
+      <div class="actions"><a class="btn primary magnetic" href="mailto:vigneshdev762@gmail.com?subject=Portfolio%20Opportunity">Email Me →</a><a class="btn magnetic" href="Vignesh_Resume.pdf" target="_blank">View Resume</a></div>
+    </article>
+    <article class="card">
+      <h3>Get in touch</h3>
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:vigneshdev762@gmail.com"><span>✉</span><div><b>Email</b><span>vigneshdev762@gmail.com</span></div></a>
+        <a class="contact-item" href="tel:+918608422985"><span>☎</span><div><b>Phone</b><span>+91 8608422985</span></div></a>
+        <div class="contact-item"><span>⌖</span><div><b>Location</b><span>Chennai, Tamil Nadu</span></div></div>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="wrap"><span>© 2026 Vignesh D. Built with a developer mindset.</span><span>Aspiring Full Stack Developer · MERN</span></footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('nav-open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('nav-open')));
+
+const words=["Aspiring Full Stack Developer","MERN Stack Developer","Web Developer","Problem Solver"];
+let wi=0,ci=0,del=false;
+function type(){
+ const el=document.getElementById('typed'), word=words[wi];
+ if(!del){el.textContent=word.slice(0,++ci); if(ci===word.length){del=true;setTimeout(type,1100);return}}
+ else {el.textContent=word.slice(0,--ci); if(ci===0){del=false;wi=(wi+1)%words.length}}
+ setTimeout(type,del?42:70)
+}
+setTimeout(type,800);
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
+
+const cursor=document.getElementById('cursor'), dot=document.getElementById('cursorDot');
+let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+function cursorLoop(){cx+=(mx-cx)*.16;cy+=(my-cy)*.16;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(cursorLoop)} cursorLoop();
+document.querySelectorAll('a,.skill,.project,.magnetic').forEach(el=>{
+ el.addEventListener('mouseenter',()=>{cursor.style.width='30px';cursor.style.height='30px';cursor.style.background='rgba(0,229,160,.08)'});
+ el.addEventListener('mouseleave',()=>{cursor.style.width='16px';cursor.style.height='16px';cursor.style.background='transparent'});
+});
+document.querySelectorAll('.magnetic').forEach(btn=>{
+ btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.12,y=(e.clientY-r.top-r.height/2)*.12;btn.style.transform=`translate(${x}px,${y}px)`});
+ btn.addEventListener('mouseleave',()=>btn.style.transform='');
+});
+document.querySelectorAll('.skill').forEach(card=>{
+ card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(600px) rotateX(${-y*5}deg) rotateY(${x*5}deg) translateY(-5px)`});
+ card.addEventListener('mouseleave',()=>card.style.transform='');
+});
+const sections=[...document.querySelectorAll('section[id]')];
+const navAs=[...document.querySelectorAll('.navlinks a')];
+const activeObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-45% 0px -45% 0px'});
+sections.forEach(s=>activeObs.observe(s));
+</script>
+</body>
+</html>
