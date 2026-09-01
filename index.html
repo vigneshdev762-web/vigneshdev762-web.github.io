@@ -33,7 +33,7 @@ h1{font-size:clamp(56px,8vw,102px);line-height:.86;letter-spacing:-.075em;margin
 .role{font-size:clamp(23px,3vw,38px);font-weight:800;margin-bottom:18px;color:#d8fff3}.cursor{color:var(--accent);animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
 .lead{color:#9db4ac;line-height:1.75;max-width:650px;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
 .socials{display:flex;gap:9px}.social{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;color:#b8cec5;background:rgba(8,18,15,.55);font-size:12px;font-weight:800}
-.visual{min-height:500px;position:relative;display:grid;place-items:center}.portrait{width:300px;height:300px;border-radius:28px;display:grid;place-items:center;overflow:hidden;background:#091712;border:1px solid rgba(25,245,193,.55);box-shadow:0 0 0 12px rgba(0,229,160,.025),0 0 90px rgba(0,229,160,.20);position:relative;z-index:3}.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.visual{min-height:500px;position:relative;display:grid;place-items:center}.portrait{width:330px;height:390px;border-radius:28px;display:grid;place-items:center;overflow:hidden;background:#091712;border:1px solid rgba(25,245,193,.55);box-shadow:0 0 0 12px rgba(0,229,160,.025),0 0 90px rgba(0,229,160,.20);position:relative;z-index:3}.portrait img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .ring{position:absolute;width:390px;height:390px;border:1px solid rgba(25,245,193,.24);border-radius:50%;animation:spin 18s linear infinite}.anime{position:absolute;right:-35px;bottom:20px;width:260px;height:330px;border:1px solid rgba(25,245,193,.20);border-radius:24px;overflow:hidden;opacity:.72;filter:saturate(.85) brightness(.72);box-shadow:0 18px 60px rgba(0,0,0,.45);animation:animeFloat 7s ease-in-out infinite;z-index:1}.anime img{width:100%;height:100%;object-fit:cover;object-position:center}.ring:before,.ring:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px var(--accent)}.ring:before{top:35px;left:75px}.ring:after{right:30px;bottom:80px}@keyframes spin{to{transform:rotate(360deg)}}
 .orb{position:absolute;border:1px solid rgba(25,245,193,.25);background:rgba(4,18,14,.8);backdrop-filter:blur(12px);padding:10px 13px;border-radius:12px;font-size:12px;color:#b8fff0;box-shadow:0 10px 40px rgba(0,229,160,.08);animation:float 6s ease-in-out infinite}.o1{top:50px;left:4%}.o2{top:110px;right:5%;animation-delay:-2s}.o3{bottom:100px;left:9%;animation-delay:-3.5s}.o4{bottom:60px;right:12%;animation-delay:-1s}.o5{top:45%;right:-2%;animation-delay:-4s}@keyframes float{50%{transform:translateY(-16px) rotate(1deg)}} @keyframes animeFloat{50%{transform:translateY(-10px) scale(1.015)}}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}.stat{padding:18px;border:1px solid var(--line);border-radius:15px;background:rgba(8,18,15,.55)}.stat b{font-size:24px;color:var(--accent2);display:block}.stat span{font-size:11px;color:#7f9a91}
@@ -47,7 +47,7 @@ footer{padding:30px 0 40px;color:#637b72;font-size:11px;display:flex;justify-con
 .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
 #cursor{position:fixed;width:16px;height:16px;border:1px solid rgba(25,245,193,.8);border-radius:50%;pointer-events:none;z-index:100;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;mix-blend-mode:screen}.cursor-dot{position:fixed;width:4px;height:4px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:101;transform:translate(-50%,-50%)}
 @media(max-width:900px){.hero-grid,.contact,.bento{grid-template-columns:1fr}.visual{min-height:420px}.skill-wrap{grid-template-columns:repeat(3,1fr)}.navlinks{display:none}.menu{display:block}.nav-open .navlinks{display:flex;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:rgba(5,8,7,.96);padding:20px;border:1px solid var(--line);border-radius:16px}.stats{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){section{padding:75px 0}.hero{padding-top:110px}.portrait{width:230px;height:230px}.anime{width:180px;height:230px;right:-10px;bottom:10px}.ring{width:300px;height:300px}.visual{min-height:350px}.orb{font-size:9px;padding:7px 9px}.o1{top:20px}.o2{top:70px}.o3{bottom:60px}.o4{bottom:20px}.o5{display:none}.skill-wrap,.projects{grid-template-columns:repeat(2,1fr)}.skill{padding:14px 8px}.info{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.actions .btn{width:100%}.socials{justify-content:center}nav{top:8px}.nav-actions .btn{display:none}#cursor,.cursor-dot{display:none}footer{display:block;text-align:center}footer span{display:block;margin-top:8px}}
+@media(max-width:600px){section{padding:75px 0}.hero{padding-top:110px}.portrait{width:250px;height:300px}.ring{width:300px;height:300px}.visual{min-height:350px}.orb{font-size:9px;padding:7px 9px}.o1{top:20px}.o2{top:70px}.o3{bottom:60px}.o4{bottom:20px}.o5{display:none}.skill-wrap,.projects{grid-template-columns:repeat(2,1fr)}.skill{padding:14px 8px}.info{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.actions .btn{width:100%}.socials{justify-content:center}nav{top:8px}.nav-actions .btn{display:none}#cursor,.cursor-dot{display:none}footer{display:block;text-align:center}footer span{display:block;margin-top:8px}}
 </style>
 </head>
 <body>
@@ -87,8 +87,7 @@ footer{padding:30px 0 40px;color:#637b72;font-size:11px;display:flex;justify-con
     </div>
     <div class="visual reveal" id="visual">
       <div class="ring"></div>
-      <div class="anime"><img src="anime-developer.png" alt="Animated developer workspace illustration"></div>
-      <div class="portrait"><img src="profile.png" alt="Vignesh D professional portrait"></div>
+      <div class="portrait"><img src="anime-developer.png" alt="Animated developer workspace illustration"></div>
       <div class="orb o1">React.js</div><div class="orb o2">Node.js</div><div class="orb o3">MongoDB</div><div class="orb o4">JavaScript</div><div class="orb o5">Express.js</div>
     </div>
   </div>
@@ -126,7 +125,7 @@ footer{padding:30px 0 40px;color:#637b72;font-size:11px;display:flex;justify-con
       <p>CRUD-based web application for creating, reading, updating and deleting contact records, with asynchronous API communication and dynamic data rendering.</p>
       <div class="tags"><span class="tag">JavaScript</span><span class="tag">Fetch API</span><span class="tag">CRUD</span><span class="tag">Responsive UI</span></div>
       <ul><li>Implemented asynchronous Fetch API communication.</li><li>Added form validation and dynamic contact rendering.</li><li>Structured the application with reusable JavaScript functions.</li></ul>
-      <div class="project-links"><a class="btn" href="#contact">Ask About Project →</a></div>
+      <div class="project-links"><a class="btn" href="https://vigneshvicky0706.github.io/Phonebook-with-Fetch-API-and-Asynchronous-JavaScript/" target="_blank" rel="noopener noreferrer">View Live Project →</a></div>
     </article>
     <article class="card project">
       <div class="project-preview"><div class="preview-label">SKILL SWAP / MERN</div></div>
@@ -134,7 +133,7 @@ footer{padding:30px 0 40px;color:#637b72;font-size:11px;display:flex;justify-con
       <p>Full-stack MERN application for sharing and learning skills within a community, with authentication, profiles, favorites, CRUD management and real-time chat.</p>
       <div class="tags"><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag">JWT</span><span class="tag">Tailwind CSS</span></div>
       <ul><li>Implemented JWT authentication and authorization.</li><li>Integrated REST APIs with MongoDB using Mongoose.</li><li>Added favorites, user profiles and real-time chat.</li><li>Deployed frontend/backend and managed source with Git/GitHub.</li></ul>
-      <div class="project-links"><a class="btn" href="#contact">Ask About Project →</a></div>
+      <div class="project-links"><a class="btn" href="https://delightful-bombolone-940def.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Project →</a></div>
     </article>
   </div>
 </div>
